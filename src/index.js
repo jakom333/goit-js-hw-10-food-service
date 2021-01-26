@@ -1,5 +1,9 @@
-import "./css/styles.css";
+import "./styles.css";
+import menu from "./menu.json";
 
-const add = (a, b) => a + b;
+const Theme = {
+  LIGHT: "light-theme",
+  DARK: "dark-theme",
+};
 
-add(2, 3);
+console.log(menu);
