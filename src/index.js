@@ -1,9 +1,8 @@
 import "./styles.css";
+import "./theme";
 import menu from "./menu.json";
+import foodTemplate from "./templates/food.hbs";
 
-const Theme = {
-  LIGHT: "light-theme",
-  DARK: "dark-theme",
-};
+const markup = foodTemplate(menu);
 
-console.log(menu);
+document.querySelector(".js-menu").insertAdjacentHTML("beforeend", markup);
