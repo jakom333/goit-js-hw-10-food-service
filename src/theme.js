@@ -6,8 +6,6 @@ const Theme = {
   DARK: "dark-theme",
 };
 
-switcher.addEventListener("change", changeTheme);
-
 function setDefaultTheme() {
   body.classList.add(Theme.LIGHT);
 
@@ -16,16 +14,6 @@ function setDefaultTheme() {
   if (savedTheme) {
     const parsedTheme = JSON.parse(savedTheme);
     body.classList.add(parsedTheme);
-  }
-}
-
-function changeTheme(event) {
-  if (event.target.checked) {
-    body.classList.replace(Theme.LIGHT, Theme.DARK);
-    localStorage.setItem("theme", JSON.stringify(Theme.DARK));
-  } else {
-    body.classList.replace(Theme.DARK, Theme.LIGHT);
-    localStorage.setItem("theme", JSON.stringify(Theme.LIGHT));
   }
 }
 
@@ -38,3 +26,23 @@ function darkThemeCheck() {
 
 setDefaultTheme();
 darkThemeCheck();
+
+switcher.addEventListener("change", changeTheme);
+
+function changeTheme(event) {
+  if (event.target.checked) {
+    switchToDark();
+  } else {
+    switchToLight();
+  }
+}
+
+function switchToLight() {
+  body.classList.replace(Theme.DARK, Theme.LIGHT);
+  localStorage.setItem("theme", JSON.stringify(Theme.LIGHT));
+}
+
+function switchToDark() {
+  body.classList.replace(Theme.LIGHT, Theme.DARK);
+  localStorage.setItem("theme", JSON.stringify(Theme.DARK));
+}
