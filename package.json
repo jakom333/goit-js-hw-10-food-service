@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/jakom333/goit-js-hw-10-food-service"
   },
-  "homepage": "// тут вставить url GitHub Pages после команды npm run deploy",
+  "homepage": "https://jakom333.github.io/goit-js-hw-10-food-service/",
   "devDependencies": {
     "@babel/core": "^7.11.6",
     "@babel/plugin-proposal-class-properties": "^7.10.4",
