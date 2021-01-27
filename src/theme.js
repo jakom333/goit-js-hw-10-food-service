@@ -39,10 +39,10 @@ function changeTheme(event) {
 
 function switchToLight() {
   body.classList.replace(Theme.DARK, Theme.LIGHT);
-  localStorage.setItem("theme", JSON.stringify(Theme.LIGHT));
+  localStorage.setItem("theme", Theme.LIGHT);
 }
 
 function switchToDark() {
   body.classList.replace(Theme.LIGHT, Theme.DARK);
-  localStorage.setItem("theme", JSON.stringify(Theme.DARK));
+  localStorage.setItem("theme", Theme.DARK);
 }
