@@ -149,13 +149,6 @@ body.dark-theme {
   transition: all 0.2s ease-out;
 }
 
-.card__image:hover,
-.card__descr:hover {
-  -webkit-transform: scale(1.05);
-  -ms-transform: scale(1.05);
-  transform: scale(1.05);
-}
-
 .card__name {
   margin-top: 16px;
   margin-bottom: 0;
@@ -166,7 +159,13 @@ body.dark-theme {
 .card__descr {
   line-height: 1.5;
   flex-grow: 1;
-  transition: all 0.2s ease-out;
+}
+
+.card__image:hover,
+.card__descr:hover {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .card__price {
@@ -205,10 +204,9 @@ body.dark-theme {
 .tag-list__item {
   padding: 4px 8px;
   margin: 4px;
-  border-radius: 5px;
+  border-radius: 2px;
   background-color: #3f51b5;
   color: #fff;
-  box-shadow: 1px 3px 5px rgb(0, 0, 0);
 }
 
 .button {
@@ -232,29 +230,8 @@ body.dark-theme {
 .button:hover {
   box-shadow: 0px 2px 1px 1px rgba(0, 0, 0, 0.15);
   background-color: #1976d2;
-  animation: bounce 1s;
 }
 
 .button__icon {
   margin-right: 8px;
-}
-
-@keyframes bounce {
-  0%,
-  20%,
-  60%,
-  100% {
-    transform: translateY(0);
-    transform: translateY(0);
-  }
-
-  40% {
-    transform: translateY(-20px);
-    transform: translateY(-20px);
-  }
-
-  80% {
-    transform: translateY(-10px);
-    transform: translateY(-10px);
-  }
 }
